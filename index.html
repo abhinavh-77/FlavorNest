@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlavorNest | Delicious Food Delivered Fresh Every Day</title>
+  <meta name="description" content="FlavorNest is your go-to restaurant for fresh, delicious food delivered fast. Order pizza, burgers, biryani, Chinese, desserts and drinks online.">
+  <meta name="keywords" content="restaurant, food delivery, pizza, burgers, biryani, online food order">
+  <meta name="theme-color" content="#FF6B35">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-plate">
+      <div class="preloader-spinner"></div>
+      <span class="preloader-emoji">🍕</span>
+    </div>
+  </div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🍔</span> Flavor<span class="logo-accent">Nest</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#menu" class="nav-link" data-section="menu">Menu</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#gallery" class="nav-link" data-section="gallery">Gallery</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#menu" class="cart-btn" aria-label="View cart">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-blob"></div>
+    <div class="container hero-content">
+      <p class="eyebrow fade-in-up">🔥 Fresh &amp; Hot, Straight To Your Door</p>
+      <h1 class="hero-title fade-in-up">Delicious Food Delivered <span class="text-gradient">Fresh</span> Every Day</h1>
+      <p class="hero-desc fade-in-up">Handpicked ingredients, world-class chefs, and a menu built for cravings — from sizzling biryanis to cheesy pizzas. Order in a tap and taste the difference.</p>
+      <div class="hero-buttons fade-in-up">
+        <a href="#menu" class="btn btn-primary">Order Now</a>
+        <a href="#menu" class="btn btn-outline">View Menu</a>
+      </div>
+    </div>
+    <div class="hero-wave"></div>
+  </section>
+
+  <!-- ============ POPULAR CATEGORIES ============ -->
+  <section class="categories section" id="categories">
+    <div class="container">
+      <p class="section-eyebrow fade-in">What are you craving?</p>
+      <h2 class="section-title fade-in">Popular Categories</h2>
+
+      <div class="category-grid">
+        <div class="category-card fade-in">
+          <div class="category-img-wrap">
+            <img src="images/gallery/Pizza.avif" alt="Pizza" loading="lazy">
+          </div>
+          <h3>Pizza</h3>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img-wrap">
+            <img src="images/gallery/Burgers.avif" alt="Burgers" loading="lazy">
+          </div>
+          <h3>Burgers</h3>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img-wrap">
+            <img src="images/gallery/Biryani.avif" alt="Biryani" loading="lazy">
+          </div>
+          <h3>Biryani</h3>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img-wrap">
+            <img src="images/gallery/Chinese.avif" alt="Chinese" loading="lazy">
+          </div>
+          <h3>Chinese</h3>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img-wrap">
+            <img src="images/gallery/Dessert.avif" alt="Desserts" loading="lazy">
+          </div>
+          <h3>Desserts</h3>
+        </div>
+        <div class="category-card fade-in">
+          <div class="category-img-wrap">
+            <img src="images/gallery/Drinks.avif" alt="Drinks" loading="lazy">
+          </div>
+          <h3>Drinks</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED MENU ============ -->
+  <section class="menu section section-alt" id="menu">
+    <div class="container">
+      <p class="section-eyebrow fade-in">Fresh off the grill</p>
+      <h2 class="section-title fade-in">Our Featured Menu</h2>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Menu cards are injected/enhanced via HTML directly (12 items) -->
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Biryani.avif" alt="Chicken Biryani" loading="lazy">
+            <span class="stamp">270/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Chicken Biryani</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Chicken Biryani" data-price="270/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Veg Biryani.avif" alt="Veg Biryani" loading="lazy">
+            <span class="stamp">200/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Veg Biryani</h3>
+            <div class="rating" aria-label="Rating 4 out of 5">★★★★☆</div>
+            <button class="btn-add" data-name="Veg Biryani" data-price="200/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Pizza.avif" alt="Margherita Pizza" loading="lazy">
+            <span class="stamp">100/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Margherita Pizza</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Margherita Pizza" data-price="100/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Pepperoni Pizza.avif" alt="Pepperoni Pizza" loading="lazy">
+            <span class="stamp">170/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Pepperoni Pizza</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Pepperoni Pizza" data-price="170/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Burger.avif" alt="Cheeseburger" loading="lazy">
+            <span class="stamp">200/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Cheeseburger</h3>
+            <div class="rating" aria-label="Rating 4 out of 5">★★★★☆</div>
+            <button class="btn-add" data-name="Cheeseburger" data-price="200/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Crispy Chicken Burger.avif" alt="Crispy Chicken Burger" loading="lazy">
+            <span class="stamp">220/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Crispy Chicken Burger</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Crispy Chicken Burger" data-price="220/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Fired rice.avif" alt="Fried Rice" loading="lazy">
+            <span class="stamp">80/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Fried Rice</h3>
+            <div class="rating" aria-label="Rating 4 out of 5">★★★★☆</div>
+            <button class="btn-add" data-name="Fried Rice" data-price="80/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Noodles.avif" alt="Noodles" loading="lazy">
+            <span class="stamp">100/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Noodles</h3>
+            <div class="rating" aria-label="Rating 4 out of 5">★★★★☆</div>
+            <button class="btn-add" data-name="Noodles" data-price="100/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Pasta.avif" alt="Pasta" loading="lazy">
+            <span class="stamp">70/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Pasta</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Pasta" data-price="70/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Icecream.avif" alt="Ice Cream" loading="lazy">
+            <span class="stamp">50/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Ice Cream</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Ice Cream" data-price="50/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Chocolate cake.avif" alt="Chocolate Cake" loading="lazy">
+            <span class="stamp">150/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Chocolate Cake</h3>
+            <div class="rating" aria-label="Rating 5 out of 5">★★★★★</div>
+            <button class="btn-add" data-name="Chocolate Cake" data-price="150/-">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="menu-card fade-in">
+          <div class="menu-card-img">
+            <img src="images/Menu/Juice.avif" alt="Fresh Juice" loading="lazy">
+            <span class="stamp">40/-</span>
+          </div>
+          <div class="menu-card-body">
+            <h3>Fresh Juice</h3>
+            <div class="rating" aria-label="Rating 4 out of 5">★★★★☆</div>
+            <button class="btn-add" data-name="Fresh Juice" data-price="40/-">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT US ============ -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-img fade-in-left">
+        <img src="images/About/Chair.avif" alt="Inside FlavorNest restaurant" loading="lazy">
+        <div class="about-badge">
+          <strong id="expCounter">0</strong>
+          <span>Years of<br>Experience</span>
+        </div>
+      </div>
+
+      <div class="about-content fade-in-right">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title section-title-left">Serving Happiness On A Plate Since 2014</h2>
+        <p class="about-text">FlavorNest started as a small family kitchen with one goal: cook food the way we'd want to eat it. Today we bring that same care to every order, blending traditional recipes with modern flavors, made fresh and delivered fast.</p>
+
+        <div class="about-points">
+          <div class="about-point">
+            <h4>🎯 Our Mission</h4>
+            <p>To deliver restaurant-quality meals made from fresh, honest ingredients — fast, friendly, and affordable for every table.</p>
+          </div>
+          <div class="about-point">
+            <h4>🌍 Our Vision</h4>
+            <p>To become the most loved food brand in every neighborhood we serve, one satisfied customer at a time.</p>
+          </div>
+        </div>
+
+        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US / SERVICES ============ -->
+  <section class="why section section-alt" id="services">
+    <div class="container">
+      <p class="section-eyebrow fade-in">Why FlavorNest</p>
+      <h2 class="section-title fade-in">Why Choose Us</h2>
+
+      <div class="why-grid">
+        <div class="why-card fade-in">
+          <div class="why-icon">🥗</div>
+          <h3>Fresh Ingredients</h3>
+          <p>Sourced daily from trusted local farms to keep every bite crisp, healthy and full of flavor.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon">🚀</div>
+          <h3>Fast Delivery</h3>
+          <p>Hot meals at your door in 30 minutes or less, tracked live from our kitchen to your table.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon">👨‍🍳</div>
+          <h3>Best Chefs</h3>
+          <p>Award-winning chefs with decades of experience crafting every dish with precision and passion.</p>
+        </div>
+        <div class="why-card fade-in">
+          <div class="why-icon">💰</div>
+          <h3>Affordable Prices</h3>
+          <p>Generous portions and premium taste, priced fairly so great food never breaks the bank.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPECIAL OFFERS ============ -->
+  <section class="offers section" id="offers">
+    <div class="container">
+      <p class="section-eyebrow fade-in">Limited Time</p>
+      <h2 class="section-title fade-in">Special Offers</h2>
+
+      <div class="offers-grid">
+        <div class="offer-card offer-orange fade-in">
+          <span class="offer-stamp">50% OFF</span>
+          <h3>Pizza Fiesta</h3>
+          <p>Get 50% off on all large pizzas, every Tuesday and Wednesday.</p>
+          <a href="#menu" class="btn btn-light">Order Now</a>
+        </div>
+        <div class="offer-card offer-red fade-in">
+          <span class="offer-stamp">1+1 FREE</span>
+          <h3>Burger Buddy</h3>
+          <p>Buy 1 burger and get 1 absolutely free — perfect for sharing.</p>
+          <a href="#menu" class="btn btn-light">Order Now</a>
+        </div>
+        <div class="offer-card offer-dark fade-in">
+          <span class="offer-stamp">COMBO</span>
+          <h3>Weekend Special</h3>
+          <p>Biryani + Drink + Dessert combo at an unbeatable weekend price.</p>
+          <a href="#menu" class="btn btn-light">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOD GALLERY ============ -->
+  <section class="gallery section section-alt" id="gallery">
+    <div class="container">
+      <p class="section-eyebrow fade-in">A Feast For The Eyes</p>
+      <h2 class="section-title fade-in">Food Gallery</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Pizza.avif" alt="Pizza close up" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Burger.avif" alt="Burger stacked" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Biryani.avif" alt="Biryani served" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Noodles.avif" alt="Noodles bowl" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Cake.avif" alt="Chocolate cake slice" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Fresh.avif" alt="Fresh juice glass" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Ice Cream.avif" alt="Ice cream scoops" loading="lazy"></div>
+        <div class="gallery-item fade-in"><img src="images/Food Gallery/Pasta.avif" alt="Pasta dish" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact section section-alt" id="contact">
+    <div class="container">
+      <p class="section-eyebrow fade-in">Get In Touch</p>
+      <h2 class="section-title fade-in">Contact Us</h2>
+
+      <div class="contact-grid">
+        <form class="contact-form fade-in-left" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Name" required>
+              <span class="error-msg" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Example@gmail.com" required>
+              <span class="error-msg" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 89745 96235" required>
+              <span class="error-msg" id="phoneError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what's on your mind..." required></textarea>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-success" id="formSuccess">✅ Thank you! Your message has been sent successfully.</p>
+        </form>
+
+        <div class="contact-info fade-in-right">
+          <div class="contact-card">
+            <h4>📍 Our Address</h4>
+            <p>Nellore Bus Stand Road,Ongole</p>
+          </div>
+          <div class="contact-card">
+            <h4>📞 Phone</h4>
+            <p>+91 7780690624</p>
+          </div>
+          <div class="contact-card">
+            <h4>✉️ Email</h4>
+            <p>abhi@gmail.com</p>
+          </div>
+          <div class="contact-card">
+            <h4>⏰ Hours</h4>
+            <p>Mon - Sun: 9:00 AM - 11:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-icon">🍔</span> Flavor<span class="logo-accent">Nest</span>
+        </a>
+        <p>Delicious food, delivered fresh every day. Made with love, served with pride.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Opening Hours</h4>
+        <ul class="footer-links">
+          <li>Mon - Fri: 9:00 AM - 11:00 PM</li>
+          <li>Saturday: 10:00 AM - 12:00 AM</li>
+          <li>Sunday: 10:00 AM - 10:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-links">
+          <li>Nellore Bus Stand,Ongole</li>
+          <li>+91 7780690624</li>
+          <li>abhi@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> FlavorNest. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ SCROLL TO TOP BUTTON ============ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+  <!-- ============ TOAST NOTIFICATION ============ -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
