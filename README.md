@@ -3,7 +3,7 @@
 **FlavorNest** is a modern and responsive food ordering website built using **HTML, CSS, and JavaScript**. It provides an attractive user interface for exploring delicious dishes, browsing food categories, and placing orders with a smooth and interactive user experience.
 
 ## 🌐 Live Demo
-https://abhinavh-77.github.io/FlavorNest/
+https://github.com/abhinavh-77/FlavorNest
 
 ---
 
